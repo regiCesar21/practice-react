@@ -16,7 +16,7 @@ function Hour(){
 <div>
    <p className={style.p}>{hour}</p>
    <h1>Current date is {date}</h1>
-   <br></br>
+   
    </div>
   )
 }
