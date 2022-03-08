@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+
 body {
   margin: 0;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: antiquewhite;
+
+  height: 100vh;
+  background: rgb(250,235,215);
+  background-repeat: no-repeat;
+  background: linear-gradient(0deg, rgba(250,235,215,1) 0%, rgba(236,217,186,1) 50%, rgba(222,193,155,1) 100%);
+  font-family: 'Federo', sans-serif;
 }
 
 pp {
@@ -13,7 +21,7 @@ pp {
   justify-content: center;
   align-items: center;
   height: 20vh;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Federo', sans-serif;
   font-size: 150%;
   align-items: center;
   
@@ -23,9 +31,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Federo', sans-serif;
   font-size: 230%;
   
+}
+
+.date {
+
+  font-size: 10%;
 }
 
 code {

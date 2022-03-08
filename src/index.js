@@ -8,15 +8,24 @@ function Hour(){
   const [hour, setHour]  = useState(new Date().toLocaleTimeString("BR"));
   
   const current = new Date();
-  const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
 
+  const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+  const dayNames = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"];
+
+
+  
+
+  const year = `${current.getMonth}`
+  const date = `${current.getDate()}/${monthNames[current.getMonth()]}/${current.getFullYear()}`;
+  const day = `${dayNames[current.getDay()]}`;
   setInterval(() => setHour(new Date().toLocaleTimeString("BR")));
 
   return(
-<div>
-   <p className={style.p}>{hour}</p>
-   <h1>Current date is {date}</h1>
-   
+<div className={style}>
+   <p>{hour}</p>
+   <p id='date'>{day} | {date}</p>
    </div>
   )
 }
