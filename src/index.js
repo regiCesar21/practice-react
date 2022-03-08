@@ -1,32 +1,43 @@
+import { render } from '@testing-library/react';
 import { tab } from '@testing-library/user-event/dist/tab';
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import style from './index.css';
 
-class Header extends React.Component {
+function Hour(){
+  const [hour, setHour]  = useState(new Date().toLocaleTimeString("BR"));
+  
+  const current = new Date();
+  const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
 
-  constructor(props) {
-    super(props);
-    this.state = {favoritecolor: "  "};
-  }
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({favoritecolor: "yellow"})
-    }, 1000)
-  }
-  componentDidUpdate() {
-    document.getElementById("mydiv").innerHTML =
-    "The updated favorite is " + this.state.favoritecolor;
-  }
-  render() {
-    return (
-      <div>
-      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
-      <div id="mydiv"></div>
-      </div>
-    );
-  }
+  setInterval(() => setHour(new Date().toLocaleTimeString("BR")));
+
+  return(
+<div>
+   <p className={style.p}>{hour}</p>
+   <h1>Current date is {date}</h1>
+   </div>
+  )
 }
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+
+function NewHour(){
+  return (
+  <div>
+    <Hour />
+    </div>
+  )
+}
+
+
+ReactDOM.render(
+  <>
+  <pp>It's Currently:</pp>
+  <NewHour />
+  </>
+
+, document.getElementById('root'))
+
+
 
 

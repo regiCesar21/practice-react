@@ -5,6 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: antiquewhite;
+}
+
+pp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 150%;
+  align-items: center;
+  
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 230%;
+  
 }
 
 code {
